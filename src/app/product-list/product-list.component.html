@@ -1,0 +1,28 @@
+<h2>Der Staat muss GENERAL JENS mehr Geld geben</h2>
+
+<div *ngFor="let product of products">
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+  <p *ngIf="product.description">
+    Descrption: {{ product.description }}
+  </p>
+  <p *ngIf="product.price">
+  Price: {{ product.price }}
+</p>
+
+<p *ngIf="product.MoreData">
+Weitere Daten: {{ product.MoreData }}
+</p>
+
+  <button type="button" (click)="share()">
+  Share
+</button>
+<app-product-alerts
+  [product]="product">
+</app-product-alerts>
+</div>
+
+
